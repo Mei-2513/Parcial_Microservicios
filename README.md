@@ -44,6 +44,38 @@ en Traefik?
 
 Traefik puede obtener y renovar certificados HTTPS automáticamente usando Let's Encrypt.
 
+SECCIÓN 2: DESARROLLO PRÁCTICO
 
+usamos docker-compose up --build -d
+para construir las imagenes y levantar los contonedores juntos y -d para que corran en segundo plano
 
+luego mplementamos la arquitectura de microservicios que incluya:
+
+● Una API REST en Flask o FastAPI
+● Un worker que consuma mensajes desde RabbitMQ
+● Traefik como reverse proxy
+● Toda la solución orquestada con Docker Compose
+
+Creamos un archivo docker-compose.yml que incluya los servicios:
+● api
+● worker
+● rabbitmq
+● traefik
+![image](https://github.com/user-attachments/assets/1b17c4a0-2156-45f8-a991-a18c229edd5e)
+
+2.2 API productora de mensajes
+lo implementamos:
+![image](https://github.com/user-attachments/assets/36e86195-5c02-45bc-b6f9-dbc6f128d911)
+
+2.3 Worker consumidor
+
+creamos un worker que escuche los mensajes:
+
+![image](https://github.com/user-attachments/assets/124efc1c-765b-4ddc-b09c-000d721b3da0)
+
+2.4 Configuración de Traefik
+Configuramos /api:c 
+![image](https://github.com/user-attachments/assets/60491c83-7c93-4320-a9c5-730ffddf4c7c)
+y  /monitor
+ ![image](https://github.com/user-attachments/assets/6b680f56-6e31-4523-a64f-64854b3fabef)
 
