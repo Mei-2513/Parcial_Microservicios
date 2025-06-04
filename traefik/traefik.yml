@@ -1,0 +1,20 @@
+api:
+  dashboard: true
+  insecure: true
+  debug: true  # Para troubleshooting
+
+providers:
+  docker:
+    exposedByDefault: false
+    network: microservices_net
+    swarmMode: false
+    watch: true
+
+entryPoints:
+  web:
+    address: ":80"
+
+log:
+  level: DEBUG  # Para ver más detalles en los logs
+
+accessLog: {}  # Habilita logs de acceso
