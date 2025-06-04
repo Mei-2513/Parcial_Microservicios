@@ -79,3 +79,5 @@ Configuramos /api:c
 y  /monitor
  ![image](https://github.com/user-attachments/assets/6b680f56-6e31-4523-a64f-64854b3fabef)
 
+![image](https://github.com/user-attachments/assets/cd1b72d0-d4e8-4cdf-84e0-1a13c7c198ee)
+
